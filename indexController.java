@@ -26,7 +26,13 @@ public String listar(Model model) {
 @ModelAttribute("articulos")
 public List<articulo>poblarUsuario(){
 List<articulo> articulos = Arrays.asList(
-		new articulo ("Bueno", "120", "Lenovo", "2", "Toshiba"));
+		new articulo ("Saludable", "$5", "Danonino", "5", "Danone"),
+		new articulo ("Refrescante", "$10", "Sprite", "10", "CocaCola"),
+		new articulo ("Asqueroso", "$12", "Doritos", "5", "Sabritas"),
+		new articulo ("Filoso", "$3", "Igloo", "18", "Mapped"),
+		new articulo ("Entretenido", "$7,000", "Xbox", "1", "Microsoft"),
+		new articulo ("Delicioso", "$15", "Oreo", "5", "Nestle"));
+
 
 return articulos;
 }
