@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xlmns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"/>
+<title th:text="${titulo}"></title>
+</head>
+<body>
+<h1 th:text="${titulo}"></h1>
+<div th:if="${articulos.size()==0}">no hay elementos en la lista!</div>
+
+<table th:if="${not articulos.isEmpty()}">
+	<thead>
+		<tr>
+			<th>Descripción</th>
+			<th>Precio</th>
+			<th>Marca</th>
+			<th>Cantidad<th>
+			<th>Proveedor</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr th:each="articulo: ${articulos}">
+			<td th:text="${articulo.descripcion}"></td>
+			<td th:text="${articulo.precio}"></td>
+			<td th:text="${articulo.marca}"></td>
+			<td th:text="${articulo.cantidad}"></td>
+			<td th:text="${articulo.proveedor}"></td>
+		</tr>
+	</tbody>
+</table>
+</body>
+</html>
